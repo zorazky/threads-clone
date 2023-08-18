@@ -4,7 +4,7 @@ const ThreadInput = () => {
       <>
         <p></p>
         <input />
-        <button></button>
+        <button className="primer">Post</button>
       </>
     );
   }
