@@ -1,129 +1,128 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": 1,
+      "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
+      "username": "Code with Ania",
+      "handle": "aniakubow",
+      "bio": "Praesent posuere mi maximus molestie vehicula. Curabitur convallis sapien at lacinia pharetra. Sed gravida massa sit amet nisl iaculis, varius sodales ante dictum.",
+      "link": "https://ww.linktr.ee/aniakubow",
+      "img": "https://i.imgur.com/QvICKE3.jpg",
+      "instagram_url": "https://www.instagram.com/aniakubow",
+      "followers": [
         {
-            "id":1,
-            "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
-            "username": "Code with Ania",
-            "handle": "aniakubow",
-            "bio": "Ipsum lorem",
-            "link": "https://ww.linktr.ee/aniakubow",
-            "img": "https://i.imgur.com/QvICKE3.jpg",
-            "instagram_url": "https://www.instagram.com/aniakubow",
-            "followers": [
-                {
-                    "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224"
-                },
-                {
-                    "user_uuid": "c66006c7-1a23-4a3f-a134-72bdc462d373"
-                }
-            ]
+          "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224"
         },
         {
-            "id":2,
-            "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224",
-            "username": "Bobby Burgers",
-            "handle": "bobyburgers",
-            "bio": "Ipsum lorem burgers",
-            "link": "https://ww.linktr.ee/aniakubow",
-            "img": "https://i.imgur.com/rWYtZa6.jpg",
-            "instagram_url": "https://www.instagram.com/aniakubow",
-            "followers": [
-                {
-                    "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be"
-                },
-                {
-                    "user_uuid": "c66006c7-1a23-4a3f-a134-72bdc462d373"
-                }
-            ]
-        },
-        {
-            "id":3,
-            "user_uuid": "c66006c7-1a23-4a3f-a134-72bdc462d373",
-            "username": "Ani Smith",
-            "handle": "anisayer",
-            "bio": "Ipsum lorem plants",
-            "link": "https://ww.linktr.ee/aniakubow",
-            "img": "https://i.imgur.com/jONHmE5.png",
-            "instagram_url": "https://www.instagram.com/aniakubow",
-            "followers": [
-                {
-                    "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be"
-                },
-                {
-                    "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be"
-                }
-            ]
+          "user_uuid": "c66006c7-1a23-4a3f-a134-72bdc462d373"
         }
-    ],
-       
-
-    "threads": [
+      ]
+    },
+    {
+      "id": 2,
+      "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224",
+      "username": "Bobby Burgers",
+      "handle": "bobyburgers",
+      "bio": "Ipsum lorem burgers",
+      "link": "https://ww.linktr.ee/aniakubow",
+      "img": "https://i.imgur.com/rWYtZa6.jpg",
+      "instagram_url": "https://www.instagram.com/aniakubow",
+      "followers": [
         {
-            "id": 0,
-            "timestamp": "17",
-            "thread_from": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
-            "thread_to": null,
-            "reply_to": null,
-            "text": "Hello world (of threads)",
-            "likes": [
-                {
-                    "uuid": "b2451826-6259-41c1-9d1a-b12887130224"
-                }
-            ]
+          "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be"
         },
         {
-            "id": 1,
-            "timestamp": "18",
-            "thread_from": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
-            "thread_to": null,
-            "reply_to": null,
-            "text": "Awesome thread!",
-            "likes": [
-                {
-                    "uuid": "b2451826-6259-41c1-9d1a-b12887130224"
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "timestamp": "19",
-            "thread_from": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
-            "thread_to": null,
-            "reply_to": null,
-            "text": "Awesome thread!",
-            "likes": [
-                {
-                    "uuid": "b2451826-6259-41c1-9d1a-b12887130224"
-                }
-            ]
-        },
-        {
-            "id": 3,
-            "timestamp": "19",
-            "thread_from": "c66006c7-1a23-4a3f-a134-72bdc462d373",
-            "thread_to": null,
-            "reply_to": null,
-            "text": "Other one",
-            "likes": [
-                {
-                    "uuid": "b2451826-6259-41c1-9d1a-b12887130224"
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "timestamp": "19",
-            "thread_from": "b2451826-6259-41c1-9d1a-b12887130224",
-            "thread_to": "c66006c7-1a23-4a3f-a134-72bdc462d373",
-            "reply_to": 3,
-            "text": "Congrats!",
-            "likes": [
-                {
-                    "uuid": "b2451826-6259-41c1-9d1a-b12887130224"
-                }
-            ]
+          "user_uuid": "c66006c7-1a23-4a3f-a134-72bdc462d373"
         }
-
-    ]
-
+      ]
+    },
+    {
+      "id": 3,
+      "user_uuid": "c66006c7-1a23-4a3f-a134-72bdc462d373",
+      "username": "Ani Smith",
+      "handle": "anisayer",
+      "bio": "Ipsum lorem plants",
+      "link": "https://ww.linktr.ee/aniakubow",
+      "img": "https://i.imgur.com/jONHmE5.png",
+      "instagram_url": "https://www.instagram.com/aniakubow",
+      "followers": [
+        {
+          "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be"
+        },
+        {
+          "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be"
+        }
+      ]
+    }
+  ],
+  "threads": [
+    {
+      "id": 0,
+      "timestamp": "17",
+      "thread_from": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Hello world (of threads)",
+      "likes": [
+        {
+          "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224"
+        },
+        {
+          "user_uuid": "19045df1-10a8-4a0e-8e21-6063a9c8b9be"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "timestamp": "18",
+      "thread_from": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Awesome thread!",
+      "likes": [
+        {
+          "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "timestamp": "19",
+      "thread_from": "19045df1-10a8-4a0e-8e21-6063a9c8b9be",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Awesome thread!",
+      "likes": [
+        {
+          "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "timestamp": "19",
+      "thread_from": "c66006c7-1a23-4a3f-a134-72bdc462d373",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Other one",
+      "likes": [
+        {
+          "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "timestamp": "19",
+      "thread_from": "b2451826-6259-41c1-9d1a-b12887130224",
+      "thread_to": "c66006c7-1a23-4a3f-a134-72bdc462d373",
+      "reply_to": 3,
+      "text": "Congrats!",
+      "likes": [
+        {
+          "user_uuid": "b2451826-6259-41c1-9d1a-b12887130224"
+        }
+      ]
+    }
+  ]
 }

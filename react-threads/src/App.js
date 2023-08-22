@@ -4,12 +4,14 @@ import Nav from "./components/Nav";
 import Header from "./components/Header"; 
 import Feed from "./components/Feed";
 import PopUp from "./components/PopUp";
+import WriteIcon from "./components/WriteIcon";
 
 const App = () => {
   const [ user, setUser ] =useState(null);
   const [ threads, setThreads] = useState(null);
   const [ viewThreadsFeed, setViewThreadsFeed] = useState(true)
   const [ filteredThreads, setFilteredThreads] = useState(null)
+  const [ openPopUp, setOpenPopUp ] = useState(false)
 
   const userId = "19045df1-10a8-4a0e-8e21-6063a9c8b9be";
 
@@ -66,10 +68,21 @@ const App = () => {
       />
       <Feed 
         user={user}
+        setOpenPopUp={setOpenPopUp}
         filteredThreads={filteredThreads}
+        getThreads={getThreads}
       />
-      {/*<PopUp /> */}
+      {openPopUp && 
+        <PopUp 
+          user={user}
+          setOpenPopUp={setOpenPopUp}
+        />}
+
+      <div onClick={() => setOpenPopUp(true)}>
+        <WriteIcon />
+      </div>
     </div>}
+   
    </>
   );
 }

@@ -4,7 +4,7 @@ const Header = ({ user, viewThreadsFeed, setViewThreadsFeed }) => {
         <header>
             <div className="info-container">
                 <div className="user-info-container">
-                    <h1>{user.name}</h1>
+                    <h1>{user.username}</h1>
                     <p>{user.handle} <span className="threads-info">threads.net</span></p>
                 </div>
                 <div className="img-container">
