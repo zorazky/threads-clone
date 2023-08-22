@@ -12,6 +12,8 @@ const App = () => {
   const [ viewThreadsFeed, setViewThreadsFeed] = useState(true)
   const [ filteredThreads, setFilteredThreads] = useState(null)
   const [ openPopUp, setOpenPopUp ] = useState(false)
+  const [ interactingThread, setInteractingThread ] = useState(null)
+  const [ popUpFeedThreads, setPopUpFeedThreads] = useState(null)
 
   const userId = "19045df1-10a8-4a0e-8e21-6063a9c8b9be";
 
@@ -46,6 +48,20 @@ const App = () => {
     }
   }
 
+  const getReplies = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/threads?reply_to=${interactingThread?.id}`)
+      const data = await response.json()
+      setPopUpFeedThreads(data);
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  useEffect(() => {
+    getReplies()
+  }, [interactingThread])
+
   useEffect(() => {
     getUser()
     getThreads()
@@ -55,7 +71,7 @@ const App = () => {
     getThreadsFeed()
   }, [user, threads, viewThreadsFeed])
 
-  console.log(user);
+ console.log("interactive", interactingThread)
 
   return (
    <>
@@ -71,11 +87,13 @@ const App = () => {
         setOpenPopUp={setOpenPopUp}
         filteredThreads={filteredThreads}
         getThreads={getThreads}
+        setInteractingThread={setInteractingThread}
       />
       {openPopUp && 
         <PopUp 
           user={user}
           setOpenPopUp={setOpenPopUp}
+          popUpFeedThreads={popUpFeedThreads}
         />}
 
       <div onClick={() => setOpenPopUp(true)}>
