@@ -1,7 +1,25 @@
 
 import moment from "moment"
+import { useEffect, useState } from "react";
 
-const PopUpThread = ({ user, popUpFeedThread}) => {
+const PopUpThread = ({ popUpFeedThread}) => {
+
+  const [user, setUser] = useState(null);
+
+  const getUser = async() => {
+    try {
+      const response = await fetch(`http://localhost:3000/users?user_uuid=${popUpFeedThread.thread_from}`)
+      const data = await response.json()
+      setUser(data[0])
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  useEffect(() => {
+    getUser()
+  }, [])
+
 
     const timePassed = moment().startOf('day').fromNow(popUpFeedThread.timestamp)
     return (
@@ -9,10 +27,10 @@ const PopUpThread = ({ user, popUpFeedThread}) => {
         <div className="text-container">
           <div>
               <div className="img-container">
-                <img src={user.img} alt="profile avatar" />
+                <img src={user?.img} alt="profile avatar" />
               </div>
               <div>
-                <p><strong>{user.handle}</strong></p>
+                <p><strong>{user?.handle}</strong></p>
                 <p>{popUpFeedThread.text}</p>
               </div>
           </div>

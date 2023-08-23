@@ -14,6 +14,7 @@ const App = () => {
   const [ openPopUp, setOpenPopUp ] = useState(false)
   const [ interactingThread, setInteractingThread ] = useState(null)
   const [ popUpFeedThreads, setPopUpFeedThreads] = useState(null)
+  const [ text,setText ] = useState("")
 
   const userId = "19045df1-10a8-4a0e-8e21-6063a9c8b9be";
 
@@ -58,6 +59,35 @@ const App = () => {
     }
   }
 
+  const postThread = async () => {
+
+    const thread = {
+      "timestamp": new Date(),
+      "thread_from": user.user_uuid,
+      "thread_to": user.user_uuid || null,
+      "reply_to": interactingThread?.id || null,
+      "text": text,
+      "likes": []
+    }
+    try {
+      const response = await fetch(`http://localhost:3000/threads`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(thread)
+      })
+
+      const result = await response.json()
+      console.log(result)
+      getThreads()
+      getReplies()
+      setText("")
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   useEffect(() => {
     getReplies()
   }, [interactingThread])
@@ -72,6 +102,12 @@ const App = () => {
   }, [user, threads, viewThreadsFeed])
 
  console.log("interactive", interactingThread)
+
+ const handleClick = () => {
+    setPopUpFeedThreads(null)
+    setInteractingThread(null)
+    setOpenPopUp(true)
+ }
 
   return (
    <>
@@ -94,9 +130,12 @@ const App = () => {
           user={user}
           setOpenPopUp={setOpenPopUp}
           popUpFeedThreads={popUpFeedThreads}
+          text={text}
+          setText={setText}
+          postThread={postThread}
         />}
 
-      <div onClick={() => setOpenPopUp(true)}>
+      <div onClick={handleClick}>
         <WriteIcon />
       </div>
     </div>}
